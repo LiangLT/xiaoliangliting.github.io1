@@ -170,10 +170,10 @@ h1,h2,h3,h4,h5,h6 {
 /*Í·²¿*/
 .commonHeader { height: 48px; line-height: 48px; background: #12b7f5; color: #fff;}
 
-.commonHeader .headerList { width: 10%; text-align: center; float: left;}
+.commonHeader .headerList { width: 15%; text-align: center; float: left;}
 .commonHeader .headerList a { display: block;}
 .commonHeader .headerList a img { width: 13px; height: auto;}
-.commonHeader .headerCenter { width: 80%; float: left; text-align: center; font-size: 18px;}
+.commonHeader .headerCenter { width: 70%; float: left; text-align: center; font-size: 18px;}
 .register { background: #fff;}
 .register .registerList { border-bottom: 1px solid #ddd;}
 .register .registerList span { text-align: right; display: inline-block; width: 80px;}
@@ -191,7 +191,8 @@ h1,h2,h3,h4,h5,h6 {
 .nav ul li a img { width: 20px; text-align: center;}
 .nav ul li a p { color: #333; padding: 3px 0 0;}
 .newIcon { width: 20px; position: relative; margin: 0 auto;}
-.newIcon i { position: absolute; top: -1px; right: -9px; width: 16px; height: 16px; line-height: 16px; border-radius: 16px; border: 1px solid #ddd; background: #F51812;}
+.newIcon i { position: absolute; top: -1px; right: -9px; width: 16px; height: 16px; line-height: 16px;
+    border-radius: 16px; border: 1px solid #ddd; background: #F51812; color: #fff; font-style: normal;}
 .bannerIndex { position: relative; width: 100%; height: 133px; overflow: hidden;}
 .bannerIndex ul { position: relative; width: 100%; height: 133px; overflow: hidden;}
 .bannerIndex ul li { }
@@ -264,11 +265,22 @@ h1,h2,h3,h4,h5,h6 {
 
 .noticeList { position: relative; padding: 10px 15px;}
 .noticeList .noticePic { position: absolute; width: 40px; top: 13px; left: 15px;}
-.noticeList .noticePic img { width: 35px; height: 35px; }
+.noticeList .noticePic img { width: 25px;  }
 .noticeTxt { position: relative; margin-left: 46px;}
 .noticeTxt h3 { font-weight: bold;}
 .noticeTxt p { padding: 8px 0;}
 .noticeTxt .time { color: #a0a0a0;}
+
+.user_infor { background: #fff;}
+.us_list { border-bottom: 1px solid #ddd; }
+.us_list a { padding: 15px 15px; display: block;}
+.us_list a .list01 { float: left; }
+.us_list a .list01 span { display: inline-block; line-height: 60px;}
+.us_list a .list02 { float: right;}
+.us_list a .list02 img { width: 60px; height: 60px; border-radius: 5px; border: 1px solid #ddd;}
+.changeName { padding: 10px 15px; border-bottom: 0;}
+.changeName input { width: 100%; border-bottom: 1px solid #12b7f5; font-size: 14px; line-height: 30px; padding: 5px 0;}
+.changeName p { color: #a0a0a0; padding: 5px 0;}
 
 
 
