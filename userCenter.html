@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="css/phone.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"menu.html",//获取静态页面
+                type: "GET",
+                datatype: "html",
+                success: function (data) {
+                    var dataHtml=$(data).siblings("#navAjax");
+                    var htmlLen=$(dataHtml).find("li");
+                    $(htmlLen).eq(4).find("img").attr("src","images/function_hover.png");
+                    $(htmlLen).eq(4).find("p").addClass("nav_check");
+                    $("body").append(dataHtml);
+                }
+            });
+        })
+
+        $(document).ready(function(){
+            function GetQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+                var context = "";
+                if (r != null){
+                    context = r[2];
+                    reg = null;
+                    r = null;
+                    return context == null || context == "" || context == "undefined" ? "" : context;
+                }
+            }
+            $("#name").text(GetQueryString("phone"));
+        })
+    </script>
+
+</head>
+<body>
+    <header class="commonHeader">
+        <div class="headUser">我的</div>
+    </header>
+    <div class="userMain clearfix">
+        <div class="Main_lf">
+           <img src="images/default.jpg">
+        </div>
+        <div class="Main_rg">
+            <p id="name">筱筱婷</p>
+            <p>13531409665</p>
+        </div>
+    </div>
+
+    <div class="userCon">
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_my_photos.png"></div>
+                <div class="userListCenter">我的相册</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_change_psw.png"></div>
+                <div class="userListCenter">我的订单</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+    </div>
+    <div class="userCon">
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_sw_update.png"></div>
+                <div class="userListCenter">软件更新</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_com_issue.png"></div>
+                <div class="userListCenter">常见问题</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_idea_back.png"></div>
+                <div class="userListCenter">意见反馈</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_about.png"></div>
+                <div class="userListCenter">关于</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+    </div>
+    <div class="userCon">
+        <div class="userRow ">
+            <a class="clearfix" href="javascript:;">
+                <div class="userList"><img src="images/xah_app_init.png"></div>
+                <div class="userListCenter">设备</div>
+                <div class="userList "><i class="listIcon"></i></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="line"></div>
+</body>
+</html>
