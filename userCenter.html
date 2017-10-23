@@ -23,15 +23,23 @@
             });
 
             //用户名
-            $("#name").text(GetQueryString("phone"));
-
+           // $("#name").text(GetQueryString("phone"));//第一种获取值的方法
+            if(sessionStorage.getItem("phone") != undefined){
+                $("#name").text(sessionStorage.getItem("phone"))
+            }
+            else{
+                window.location="index.html";
+            }
         })
 
     </script>
     <script>
         $(function(){
+//            第一种方法
             $("#userInfor").click(function(){
-                window.location.href="userInfor.html?name="+$("#name").text();
+                //window.location.href="userInfor.html?name="+$("#name").text();
+                sessionStorage.setItem("name",$("#name").text());
+                window.location.href="userInfor.html";
             });
         })
     </script>

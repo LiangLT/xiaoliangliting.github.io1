@@ -10,7 +10,13 @@
     <script>
         $(function(){
             //用户名
-            $("#listName").text(GetQueryString("name"));
+            $("#listName").text(sessionStorage.getItem("name"));
+
+            //页面跳转
+            $("#changmeName").click(function(){
+                sessionStorage.setItem("listName",$("#listName").text());
+                window.location="userName.html";
+            });
         })
 
     </script>
@@ -29,7 +35,7 @@
             </a>
        </div>
         <div class="us_list">
-            <a class="clearfix" href="javascript:;">
+            <a class="clearfix" id="changmeName" href="javascript:;">
                 <div class="list01">昵称</div>
                 <div class="list02" id="listName"></div>
             </a>
